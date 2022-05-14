@@ -1,26 +1,24 @@
 <template>
   <div id="app">
-  
+    <h1>Hello from app</h1>
+  <app-main-wrapper/> 
   </div>
 </template>
 
 <script>
+import mainWrapper from './components/MainWrapper.vue'
 
 export default {
   name: 'App',
   components: {
-  //  -------------
+  'app-main-wrapper': mainWrapper,
   }
 }
 </script>
+<style lang="scss">
+@import "./assets/styles/styles.scss";
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
+  
 </style>
