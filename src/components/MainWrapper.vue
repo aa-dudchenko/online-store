@@ -1,6 +1,5 @@
 <template>
   <div class="MainWrapper">
-    <h1 class="MainWrapper__title">{{ title }}</h1>
     <catalog-page/>
 
 
@@ -20,9 +19,7 @@ export default {
   },
   props: {},
   data () {
-    return {
-      title: "Main wrapper"
-    }
+    return {}
   },
   methods: {},
 }
@@ -30,16 +27,8 @@ export default {
 
 <style lang="scss">
   .MainWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    /* max-width: 900px; */
-     padding: 0 20px;
     max-width: 1200px;
+    padding: 0 20px;
     margin: 0 auto;
-    
-    &__title {
-      display: none;
-    }
   }
 </style>

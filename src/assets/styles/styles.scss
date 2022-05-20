@@ -1,9 +1,6 @@
-@import "./variables.scss";
 @import "./reset.scss";
+@import "./global.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
 
-body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
+

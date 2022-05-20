@@ -10,3 +10,8 @@ export default {
   name: 'CartPage'
 }
 </script>
+
+<style lang="scss">
+
+
+</style>
