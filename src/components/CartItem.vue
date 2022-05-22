@@ -10,7 +10,7 @@
        <p class="CartItem-Quantity_text"> Кол-во: </p>
        <span class="CartItem-Quantity_num" > {{ cart_item_data.quantity }} </span>
     </div>
-    <button class="CartItem-Btn" @click="deleteFromCart"> Убрать из корзины </button>
+    <button class="CartItem-Btn" @click="deleteFromCart"> Убрать товар из корзины </button>
   </div>
 </template>
 
