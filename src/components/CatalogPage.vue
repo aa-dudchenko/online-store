@@ -1,5 +1,9 @@
 <template>
   <div class="CatalogPage">
+    <router-link :to = "{ name: 'cart', params: { cart_data: CART } }"> 
+      <div class="CatalogPage-LinkToCart">Перейти в корзину: {{ CART.length }} </div>
+    </router-link>
+    
     <h2>Catalog</h2>
     <div class="CatalogPage-List">
        <catalog-item
@@ -20,7 +24,7 @@ export default {
   name: 'CatalogPage',
 
   computed: {
-    ...mapGetters(['PRODUCTS'])
+    ...mapGetters(['PRODUCTS', 'CART'])
   },
   methods: {
     ...mapActions(['GET_PRODUCTS_FROM_API', 'ADD_TO_CART',]),
@@ -47,11 +51,20 @@ export default {
 @import "../assets/styles/styles.scss";
 
 .CatalogPage {
+  margin-top: 20px;
   &-List {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 8px;
+  }
+  &-LinkToCart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $padding;
+    border: 1px solid #000;
+    cursor: pointer;
   }
 }
 

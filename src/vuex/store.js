@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
-let store = new Vuex.Store ({
+const store = new Vuex.Store ({
 state: {
   products: [],
   cart: [],
@@ -17,9 +17,9 @@ mutations: {
 
   SET_TO_CART: ( state, product ) => { 
     const currentProduct = state.cart.find( item => item.article === product.article) 
-    if (currentProduct) currentProduct.quantity++  
+    if (currentProduct) currentProduct.quantity++
     else state.cart.push(product)
-    // currentProduct ? currentProduct.quantity++ : state.cart.push(product) 
+    // currentProduct ? currentProduct.quantity++ : state.cart.push(product)
   },
 
   REMOVE_FROM_CART: (state, index) => {
