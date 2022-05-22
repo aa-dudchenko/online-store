@@ -1,27 +1,25 @@
 <template>
   <div class="MainWrapper">
     <catalog-page/>
-
-
-    <!-- <cart-page/> -->
+    <cart-page
+     v-if="CART.length"
+     :cart_data="CART"
+    />
   </div>
 </template>
 
 <script>
 import CatalogPage from './CatalogPage.vue'
-// import CartPage from './CartPage.vue'
+import CartPage from './CartPage.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'MainWrapper',
   components: {
     CatalogPage,
-    // CartPage,
+    CartPage,
   },
-  props: {},
-  data () {
-    return {}
-  },
-  methods: {},
+  computed: { ...mapGetters ([ 'CART' ]) }
 }
 </script>
 

@@ -4,7 +4,7 @@
     <img class="CatalogItem-Image" :src=" require(`../assets/images/${product_data.image}`) " alt="img">
     <p class="CatalogItem-Name">{{product_data.name}}</p>
     <p class="CatalogItem-Price">{{product_data.price}} ₽ </p>
-    <button class="CatalogItem-Btn_add btn" @click="sendDataToParent">Добавить в корзину</button>
+    <button class="CatalogItem-Btn_add btn" @click="addToCart">Добавить в корзину</button>
   </div>
 </div>
   
@@ -17,11 +17,14 @@ export default {
   props: {
     product_data: {
       type: Object,
+      default () {
+        return {}
+      }
     }
   },
   methods: {
-    sendDataToParent () {
-      this.$emit( 'sendDataToParent', this.product_data.article )
+    addToCart () {
+      this.$emit( 'addToCart', this.product_data )
     }
   }
  

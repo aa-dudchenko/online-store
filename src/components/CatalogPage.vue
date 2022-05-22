@@ -6,7 +6,7 @@
         v-for="product in PRODUCTS"
         :key="product.article"
         :product_data="product"
-        @sendDataToParent = "showChildArticle"
+        @addToCart = "addToCart"
        />
     </div>
   </div>
@@ -14,33 +14,28 @@
 
 <script>
 import CatalogItem from './CatalogItem.vue'
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters,  mapActions } from 'vuex'
 
 export default {
   name: 'CatalogPage',
-   data () {
-    return {
-     
 
-    }
-  },
   computed: {
     ...mapGetters(['PRODUCTS'])
   },
   methods: {
-    ...mapActions(['GET_PRODUCTS_FROM_API']),
-    showChildArticle (data) {
-      console.log(data)
+    ...mapActions(['GET_PRODUCTS_FROM_API', 'ADD_TO_CART',]),
+    addToCart (data) {
+      // console.log(data);
+      this.ADD_TO_CART(data)
     }
   },
   mounted () {
     this.GET_PRODUCTS_FROM_API()
     .then( response => { 
-      if(response.data) {
+      if(response) {
         console.log('DATA RECEIVED')
       } else { console.log('DATA WAS NOT RECEIVED') }
-     })
-     
+     }) 
   },
   components: {
     CatalogItem,
