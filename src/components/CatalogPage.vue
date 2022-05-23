@@ -39,7 +39,7 @@ export default {
       if(response) {
         console.log('DATA RECEIVED')
       } else { console.log('DATA WAS NOT RECEIVED') }
-     }) 
+     })
   },
   components: {
     CatalogItem,

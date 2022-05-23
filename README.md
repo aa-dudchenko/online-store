@@ -25,7 +25,10 @@
 ```
 npm install
 ```
-
+### Fake API is launched (json-server) from db.json
+```
+json-server --watch db.json
+```
 ### Compiles and hot-reloads for development
 ```
 npm run serve
