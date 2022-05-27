@@ -1,6 +1,9 @@
-import axios from 'axios';
 import Vue from 'vue'
 import Vuex from 'vuex'
+
+import mutations from './mutations/mutations'
+import actions from './actions/actions'
+import getters from './getters/getters'
 
 Vue.use(Vuex);
 
@@ -9,75 +12,9 @@ state: {
   products: [],
   cart: [],
 },
-
-mutations: {
-  SET_PRODUCTS_TO_STATE: ( state, products ) =>  {
-    state.products = products
-  },
-
-  SET_TO_CART: ( state, product ) => { 
-    const currentProduct = state.cart.find( item => item.article === product.article) 
-    if (currentProduct) currentProduct.quantity++
-    else state.cart.push(product)
-    // currentProduct ? currentProduct.quantity++ : state.cart.push(product)
-  },
-
-  REMOVE_FROM_CART: (state, index) => {
-    state.cart.splice(index, 1)
-  },
-  DECREMENT: (state, index) => {
-    if (state.cart[index].quantity >= 1) {
-      state.cart[index].quantity--
-    }
-    
-  },
-  INCREMENT: (state, index) => {
-    state.cart[index].quantity++
-  }
-},
-
-actions: {
-  GET_PRODUCTS_FROM_API ({commit}) {
-    return axios('http://localhost:3000/products', {
-      method: "GET"
-    })
-    .then( products => {
-      commit ('SET_PRODUCTS_TO_STATE', products.data);
-      // Для дальнейшего использования в компоненте:
-      return products.data;
-    })
-    .catch( (error) => {
-      console.log(error);
-      return error;
-    })
-  },
-
-  ADD_TO_CART ( {commit}, product ) {
-    // console.log(product);
-    commit ('SET_TO_CART', product);
-  },
-  
-  DELETE_FROM_CART ( {commit}, index ) {
-    commit ('REMOVE_FROM_CART', index)
-  },
-  // Изменение кол-ва товара в корзине:
-  DECREMENT_QUANTITY ({commit}, index) {
-    commit ('DECREMENT', index)
-  },
-  INCREMENT_QUANTITY ({commit}, index) {
-    commit ('INCREMENT', index)
-  }
-},
-
-getters: {
-  PRODUCTS (state) {
-    return state.products;
-  },
-
-  CART (state) {
-    return state.cart;
-  },
-}
+mutations,
+actions,
+getters
 }) 
 
 export default store;

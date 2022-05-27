@@ -1,9 +1,11 @@
 <template>
   <div class="CartPage">
+    
     <h2>Cart</h2>
     <router-link :to = "{ name: 'catalog' }"> 
       <div class="CatalogPage-LinkToCart">Перейти в каталог </div>
     </router-link>
+
     <cart-item
      v-for="(item, index) in cart_data"
      :key="item.article" 
@@ -12,11 +14,14 @@
      @decrement="decrement(index)"
      @increment="increment(index)"
     />
+
     <p v-if="!cart_data.length">Ваша корзина пуста</p>
+
     <div class="CartPage-Total">
       <p class="CartPage-Total_title">Итоговая стоимость:</p>
       <span class="CartPage-Total_num">{{ cartTotalCost }} рублей</span>
     </div>
+    
   </div>
 </template>
 
@@ -62,7 +67,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/styles.scss";
+@import "../../assets/styles/styles.scss";
 
 .CartPage {
   // background-color: aqua;

@@ -1,8 +1,10 @@
 <template>
   <div class="MainWrapper">
+
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+    
   </div>
 </template>
 

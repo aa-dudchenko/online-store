@@ -1,10 +1,10 @@
 <template>
 <div>
   <div class="CatalogItem">
-    <img class="CatalogItem-Image" :src=" require(`../assets/images/${product_data.image}`) " alt="img">
-    <p class="CatalogItem-Name">{{product_data.name}}</p>
-    <p class="CatalogItem-Price">{{product_data.price}} ₽ </p>
-    <button class="CatalogItem-Btn_add btn" @click="addToCart">Добавить в корзину</button>
+    <img class="CatalogItem-Image" :src=" require(`../../assets/images/${product_data.image}`) " alt="img">
+    <p class="CatalogItem-Name"> {{product_data.name}} </p>
+    <p class="CatalogItem-Price"> {{product_data.price}} ₽ </p>
+    <button class="CatalogItem-Btn_add btn" @click="addToCart"> Добавить в корзину </button>
   </div>
 </div>
   
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/styles.scss";
+@import "../../assets/styles/styles.scss";
 
 
 

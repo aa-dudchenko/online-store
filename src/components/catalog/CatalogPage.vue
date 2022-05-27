@@ -13,6 +13,7 @@
         @addToCart = "addToCart"
        />
     </div>
+
   </div>
 </template>
 
@@ -48,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/styles.scss";
+@import "../../assets/styles/styles.scss";
 
 .CatalogPage {
   margin-top: 20px;

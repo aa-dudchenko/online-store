@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CatalogPage from '../components/CatalogPage'
-import CartPage from '../components/CartPage'
+import CatalogPage from '../components/catalog/CatalogPage'
+import CartPage from '../components/cart/CartPage'
 Vue.use(Router)
 
 const router = new Router({

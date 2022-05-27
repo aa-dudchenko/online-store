@@ -1,6 +1,7 @@
 <template>
   <div class="CartItem">
-    <img class="CatalogItem-Image" :src=" require(`../assets/images/${cart_item_data.image}`) " alt="img">
+
+    <img class="CatalogItem-Image" :src=" require(`../../assets/images/${cart_item_data.image}`) " alt="img">
     <div class="CartItem-Info">
       <p class="CartItem-Name"> {{ cart_item_data.name }} </p>
       <p class="CartItem-Price"> {{ cart_item_data.price }} </p>
@@ -13,6 +14,7 @@
        <button @click="incrementQuantity"> + </button>
     </div>
     <button class="CartItem-Btn" @click="deleteFromCart"> Убрать товар из корзины </button>
+    
   </div>
 </template>
 
@@ -47,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/styles.scss";
+@import "../../assets/styles/styles.scss";
 
 .CartItem {
   display: flex;
