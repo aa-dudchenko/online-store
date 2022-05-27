@@ -24,6 +24,15 @@ mutations: {
 
   REMOVE_FROM_CART: (state, index) => {
     state.cart.splice(index, 1)
+  },
+  DECREMENT: (state, index) => {
+    if (state.cart[index].quantity >= 1) {
+      state.cart[index].quantity--
+    }
+    
+  },
+  INCREMENT: (state, index) => {
+    state.cart[index].quantity++
   }
 },
 
@@ -50,6 +59,13 @@ actions: {
   
   DELETE_FROM_CART ( {commit}, index ) {
     commit ('REMOVE_FROM_CART', index)
+  },
+  // Изменение кол-ва товара в корзине:
+  DECREMENT_QUANTITY ({commit}, index) {
+    commit ('DECREMENT', index)
+  },
+  INCREMENT_QUANTITY ({commit}, index) {
+    commit ('INCREMENT', index)
   }
 },
 
@@ -60,7 +76,7 @@ getters: {
 
   CART (state) {
     return state.cart;
-  }
+  },
 }
 }) 
 

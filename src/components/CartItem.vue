@@ -8,7 +8,9 @@
     </div>
     <div class="CartItem-Quantity">
        <p class="CartItem-Quantity_text"> Кол-во: </p>
+       <button @click="decrementQuantity"> - </button>
        <span class="CartItem-Quantity_num" > {{ cart_item_data.quantity }} </span>
+       <button @click="incrementQuantity"> + </button>
     </div>
     <button class="CartItem-Btn" @click="deleteFromCart"> Убрать товар из корзины </button>
   </div>
@@ -28,11 +30,17 @@ export default {
   },
   mounted () {
     // Добавление доп. ключа в обьект массива CART, для обозначения кол-ва товара в корзине
-    this.$set( this.cart_item_data, 'quantity', 1 ) // Без set не будет реактивности
+    this.$set( this.cart_item_data, 'quantity', 1 ) 
   },
   methods: {
     deleteFromCart () {
       this.$emit( 'deleteFromCart' )
+    },
+    decrementQuantity () {
+      this.$emit( 'decrement' )
+    },
+    incrementQuantity () {
+       this.$emit( 'increment' )
     }
   },
 }

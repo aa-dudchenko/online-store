@@ -9,6 +9,8 @@
      :key="item.article" 
      :cart_item_data = "item"
      @deleteFromCart = "deleteFromCart(index)"
+     @decrement="decrement(index)"
+     @increment="increment(index)"
     />
     <p v-if="!cart_data.length">Ваша корзина пуста</p>
     <div class="CartPage-Total">
@@ -43,10 +45,16 @@ export default {
     }
   },
   methods: {
-    ...mapActions (['DELETE_FROM_CART']),
+    ...mapActions (['DELETE_FROM_CART','DECREMENT_QUANTITY','INCREMENT_QUANTITY']),
     deleteFromCart (index) {
       // console.log(index)
       this.DELETE_FROM_CART(index)
+    },
+    decrement(index) {
+      this.DECREMENT_QUANTITY(index)
+    },
+    increment(index) {
+      this.INCREMENT_QUANTITY(index)
     }
   }
   
