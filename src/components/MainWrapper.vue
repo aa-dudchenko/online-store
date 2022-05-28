@@ -8,13 +8,14 @@
   </div>
 </template>
 
-<script>
 
+<script>
 export default {
   name: 'MainWrapper',
  
 }
 </script>
+
 
 <style lang="scss">
   .MainWrapper {

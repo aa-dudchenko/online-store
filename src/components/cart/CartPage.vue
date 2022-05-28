@@ -25,12 +25,14 @@
   </div>
 </template>
 
+
 <script>
 import CartItem from './CartItem.vue'
 import { mapActions } from 'vuex'
 
 export default {
   name: 'CartPage',
+
   props: {
     cart_data: {
       type: Array,
@@ -39,9 +41,11 @@ export default {
       }
     }
   },
+
   components: {
     CartItem
   },
+
   computed: {
     // Общая стоимость товаров:
     cartTotalCost () {
@@ -49,6 +53,7 @@ export default {
       .reduce((a, v) => a + v, 0);
     }
   },
+
   methods: {
     ...mapActions (['DELETE_FROM_CART','DECREMENT_QUANTITY','INCREMENT_QUANTITY']),
     deleteFromCart (index) {
@@ -65,6 +70,7 @@ export default {
   
 }
 </script>
+
 
 <style lang="scss">
 @import "../../assets/styles/styles.scss";

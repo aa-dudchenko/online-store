@@ -10,10 +10,11 @@
   
 </template>
 
-<script>
 
+<script>
 export default {
   name: 'CatalogItem',
+
   props: {
     product_data: {
       type: Object,
@@ -22,6 +23,7 @@ export default {
       }
     }
   },
+
   methods: {
     addToCart () {
       this.$emit( 'addToCart', this.product_data )
@@ -30,11 +32,9 @@ export default {
 }
 </script>
 
+
 <style lang="scss">
 @import "../../assets/styles/styles.scss";
-
-
-
 
 .CatalogItem {
   display: flex;

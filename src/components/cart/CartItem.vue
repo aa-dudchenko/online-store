@@ -18,10 +18,11 @@
   </div>
 </template>
 
-<script>
 
+<script>
 export default {
   name: 'CartItem',
+
   props: {
     cart_item_data: {
       type: Object,
@@ -30,10 +31,12 @@ export default {
       }
     }
   },
+
   mounted () {
     // Добавление доп. ключа в обьект массива CART, для обозначения кол-ва товара в корзине
     this.$set( this.cart_item_data, 'quantity', 1 ) 
   },
+  
   methods: {
     deleteFromCart () {
       this.$emit( 'deleteFromCart' )
@@ -47,6 +50,7 @@ export default {
   },
 }
 </script>
+
 
 <style lang="scss">
 @import "../../assets/styles/styles.scss";
