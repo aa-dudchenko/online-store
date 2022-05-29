@@ -2,51 +2,291 @@
   "products": [
     {
       "image": "1.jpg",
-      "name": "T-shirt 1",
+      "name": "Ray-Ban RB 2132 901",
       "price": 2100,
-      "article": "T1",
+      "article": "G1",
       "available": true,
-      "category": "Мужские"
+      "category": "Мужские",
+      "glassesType": "Wayfarer"
     },
     {
       "image": "2.jpg",
-      "name": "T-shirt 2",
+      "name": "Ray-Ban RB 3025 004",
       "price": 3150,
-      "article": "T2",
+      "article": "G2",
       "available": true,
-      "category": "Женские"
+      "category": "Мужские",
+      "glassesType": "Aviator"
     },
     {
       "image": "3.jpg",
-      "name": "T-shirt 3",
+      "name": "Ray-Ban RB 2140",
       "price": 4200,
-      "article": "T3",
+      "article": "G3",
       "available": false,
-      "category": "Женские"
+      "category": "Женские",
+      "glassesType": "Wayfarer"
     },
     {
       "image": "4.jpg",
-      "name": "T-shirt 4",
+      "name": "Ray-Ban RB 3681 ",
       "price": 5300,
-      "article": "T4",
+      "article": "G4",
       "available": true,
-      "category": "Мужские"
+      "category": "Мужские",
+      "glassesType": "Круглые"
     },
     {
       "image": "5.jpg",
-      "name": "T-shirt 5",
+      "name": "Boss 1365-S ",
       "price": 6500,
-      "article": "T5",
+      "article": "G5",
       "available": false,
-      "category": "Женские"
+      "category": "Женские",
+      "glassesType": "Круглые"
     },
     {
       "image": "6.jpg",
-      "name": "T-shirt 6",
+      "name": "Ray-Ban RB 2132M",
       "price": 8700,
-      "article": "T6",
+      "article": "G6",
       "available": true,
-      "category": "Женские"
+      "category": "Мужские",
+      "glassesType": "Wayfarer"
+    },
+    {
+      "image": "7.jpg",
+      "name": "Guess GUS 7702",
+      "price": 2100,
+      "article": "G7",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "8.jpg",
+      "name": "Ray-Ban RB 4165",
+      "price": 3150,
+      "article": "G8",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "9.jpg",
+      "name": "Ray-Ban RB 3025",
+      "price": 4200,
+      "article": "G9",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Aviator"
+    },
+    {
+      "image": "10.jpg",
+      "name": "Ray-Ban RB 2132M",
+      "price": 5300,
+      "article": "G10",
+      "available": true,
+      "category": "Мужские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "11.jpg",
+      "name": "Ray-Ban RB 3025 0033F ",
+      "price": 6500,
+      "article": "G11",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Aviator"
+    },
+    {
+      "image": "12.jpg",
+      "name": "Ray-Ban RB 3447N",
+      "price": 8700,
+      "article": "G12",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Круглые"
+    },
+    {
+      "image": "13.jpg",
+      "name": "Ray-Ban RB 3449 ",
+      "price": 2100,
+      "article": "G13",
+      "available": true,
+      "category": "Мужские",
+      "glassesType": "Aviator"
+    },
+    {
+      "image": "14.jpg",
+      "name": "Ray-Ban RB 2199",
+      "price": 3150,
+      "article": "G14",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Круглые"
+    },
+    {
+      "image": "15.jpg",
+      "name": "Oakley OO 4145",
+      "price": 4200,
+      "article": "G15",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "16.jpg",
+      "name": "Ray-Ban RB 2187",
+      "price": 5300,
+      "article": "G16",
+      "available": true,
+      "category": "Мужские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "17.jpg",
+      "name": "Ray-Ban RB 3447JM",
+      "price": 6500,
+      "article": "G17",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Круглые"
+    },
+    {
+      "image": "18.jpg",
+      "name": "Ray-Ban RB 2132 ",
+      "price": 8700,
+      "article": "G18",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "19.jpg",
+      "name": "Oakley OO 4142",
+      "price": 2100,
+      "article": "G19",
+      "available": true,
+      "category": "Мужские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "20.jpg",
+      "name": "Jimmy Choo Calix",
+      "price": 3150,
+      "article": "G20",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "21.jpg",
+      "name": "Jimmy Choo Calix",
+      "price": 4200,
+      "article": "G21",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "22.jpg",
+      "name": "Ray-Ban RB 4165",
+      "price": 5300,
+      "article": "G22",
+      "available": true,
+      "category": "Мужские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "23.jpg",
+      "name": "Ray-Ban RB 3025 003",
+      "price": 6500,
+      "article": "G23",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Aviator"
+    },
+    {
+      "image": "24.jpg",
+      "name": "Ray-Ban RB 4165 710",
+      "price": 8700,
+      "article": "G24",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "25.jpg",
+      "name": "Oakley OO 4141",
+      "price": 2100,
+      "article": "G25",
+      "available": true,
+      "category": "Мужские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "26.jpg",
+      "name": "Armani Exchange AX ",
+      "price": 3150,
+      "article": "G26",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "27.jpg",
+      "name": "Ray-Ban RB 3025 004",
+      "price": 4200,
+      "article": "G27",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Aviator"
+    },
+    {
+      "image": "28.jpg",
+      "name": "Ray-Ban RB 4105 601 ",
+      "price": 5300,
+      "article": "G28",
+      "available": true,
+      "category": "Мужские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "29.jpg",
+      "name": "Ray-Ban RB 4147 6095",
+      "price": 6500,
+      "article": "G29",
+      "available": false,
+      "category": "Женские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "30.jpg",
+      "name": "Kenzo KZ 40002I ",
+      "price": 8700,
+      "article": "G30",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Спортивные"
+    },
+    {
+      "image": "31.jpg",
+      "name": "Roy-Ban Sun Glasses",
+      "price": 6500,
+      "article": "G31",
+      "available": false,
+      "category": "Мужские",
+      "glassesType": "Квадратные"
+    },
+    {
+      "image": "32.jpg",
+      "name": "Ray-Ban RB 3447N",
+      "price": 8700,
+      "article": "G32",
+      "available": true,
+      "category": "Женские",
+      "glassesType": "Aviator"
     }
   ]
 } 

@@ -5,12 +5,12 @@
       <div class="CatalogPage-LinkToCart">Перейти в корзину: {{ CART.length }} </div>
     </router-link>
 
-    <select-block
-      :options="options"
-      :selected="selected"
-      @selectOption="sortCategory"
-    />
-
+      <select-block
+        :options="options"
+        :selected="selected"
+        @selectOption="sortCategory"
+      />
+    
     <div class="CatalogPage-List">
        <catalog-item
         v-for="product in filteredProducts"
@@ -37,21 +37,27 @@ export default {
       // Категории для селекта
       options: [
         {name: 'Все товары', value: ''},
-        {name: 'Мужские', value: 'м'},
-        {name: 'Женские', value: 'ж'},
+        {name: 'Мужские',},
+        {name: 'Женские',},
+        {name: 'Aviator',},
+        {name: 'Wayfarer',},
+        {name: 'Круглые',},
+        {name: 'Квадратные',},
+        {name: 'Спортивные',},
       ],
       selected: 'категория',
-      sortedProducts: [],
+      sortedProducts: []
     }
   },
 
   computed: {
     ...mapGetters(['PRODUCTS', 'CART']),
+
     filteredProducts () {
       if (this.sortedProducts.length) {
         return this.sortedProducts
       } else { return this.PRODUCTS }
-    }
+    },
   },
 
   methods: {
@@ -65,7 +71,7 @@ export default {
     sortCategory (category) {
       this.selected = category.name
       this.sortedProducts = []
-      this.sortedProducts = this.PRODUCTS.filter( item => item.category === category.name)
+      this.sortedProducts = this.PRODUCTS.filter( item => item.category === category.name || item.glassesType === category.name )
     }
   },
 
@@ -91,12 +97,14 @@ export default {
 
 .CatalogPage {
   margin-top: 50px;
+
   &-List {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
   }
+
   &-LinkToCart {
     position: absolute;
     top: 0;
@@ -105,6 +113,7 @@ export default {
     border: 1px solid #000;
     cursor: pointer;
   }
+
 }
 
 </style>

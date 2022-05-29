@@ -9,9 +9,11 @@ import mainWrapper from './components/MainWrapper.vue'
 
 export default {
   name: 'App',
+
   components: {
   'app-main-wrapper': mainWrapper,
-  }
+  },
+
 }
 </script>
 <style lang="scss">

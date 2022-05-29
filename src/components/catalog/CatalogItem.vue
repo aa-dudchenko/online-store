@@ -4,7 +4,14 @@
     <img class="CatalogItem-Image" :src=" require(`../../assets/images/${product_data.image}`) " alt="img">
     <p class="CatalogItem-Name"> {{product_data.name}} </p>
     <p class="CatalogItem-Price"> {{product_data.price}} ₽ </p>
-    <button class="CatalogItem-Btn_add btn" @click="addToCart"> Добавить в корзину </button>
+    <v-btn
+     round
+     small
+     @click="addToCart"
+      color="#7cc7ff"
+      > 
+      <span class="CatalogItem-Btn_text"> Добавить в корзину </span>
+    </v-btn>
   </div>
 </div>
   
@@ -40,12 +47,28 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 8px 0 #c0c0c0;
+  padding: $padding;
+  min-width: 150px;
 
-   box-shadow: 0 0 8px 0 #c0c0c0;
-   padding: $padding;
-  //  max-height: 300px;
-   min-width: 150px;
-  &-Image {width: 100px; height: 70px;}
+  &-Image {
+    width: 100px;
+    height: 70px;
+  }
+
+  &-Name {
+    margin-bottom: 10px;
+  }
+
+  &-Price {
+
+  }
+
+  &-Btn_text {
+    color: #31475e;
+    padding: 15px;
+  }
+
   }
 
 </style>
