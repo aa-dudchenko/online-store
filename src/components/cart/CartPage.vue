@@ -1,10 +1,16 @@
 <template>
   <div class="CartPage">
-    
-    <h2>Cart</h2>
-    <router-link :to = "{ name: 'catalog' }"> 
-      <div class="CatalogPage-LinkToCart">Перейти в каталог </div>
-    </router-link>
+    <h2 class="CartPage-Title"> Корзина </h2>
+
+    <div class="CatalogPage-LinkToCart">
+        <v-btn
+         color="#3fb884"
+         :to = "{ name: 'catalog' }"
+        >
+          <v-icon left color="#fff"> reply </v-icon>
+          <span class="CatalogPage-LinkToCart_text"> Перейти в каталог </span>
+        </v-btn>
+      </div>
 
     <cart-item
      v-for="(item, index) in cart_data"
@@ -15,10 +21,10 @@
      @increment="increment(index)"
     />
 
-    <p v-if="!cart_data.length">Ваша корзина пуста</p>
+    <p class="CartPage-EmptyText" v-if="!cart_data.length"> Ваша корзина пуста </p>
 
     <div class="CartPage-Total">
-      <p class="CartPage-Total_title">Итоговая стоимость:</p>
+      <p class="CartPage-Total_title"> Итоговая стоимость: </p>
       <span class="CartPage-Total_num">{{ cartTotalCost }} рублей</span>
     </div>
     
@@ -76,22 +82,30 @@ export default {
 @import "../../assets/styles/styles.scss";
 
 .CartPage {
-  // background-color: aqua;
+
+  &-EmptyText {
+    font-size: 28px;
+  }
+  
+  &-Title {
+  margin: 20px 0 40px 10px;
+  }
 
   &-Total {
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgb(58, 192, 51);
-    padding: 40px;
+    background-color: #3fb884;
+    border-top: 1px solid #31475e;
+    padding: 12px;
     color: #fff;
     text-align: center;
     text-shadow: #000 1px 0 10px;
     font-size: 22px;
     font-weight: 600;
     &_title { margin-bottom: 10px; }
-    &_num { color:yellow }
+    &_num { color: yellow }
   }
 }
 

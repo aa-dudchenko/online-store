@@ -1,16 +1,22 @@
 <template>
   <div class="CatalogPage">
 
-    <router-link :to = "{ name: 'cart', params: { cart_data: CART } }"> 
-      <div class="CatalogPage-LinkToCart">Перейти в корзину: {{ CART.length }} </div>
-    </router-link>
+      <div class="CatalogPage-LinkToCart">
+        <v-btn
+         color="#3fb884"
+         :to = "{ name: 'cart', params: { cart_data: CART } }"
+        >
+          <v-icon left color="#fff"> shopping_cart </v-icon>
+          <span class="CatalogPage-LinkToCart_text"> Перейти в корзину <span class="CatalogPage-LinkToCart_num"> {{ CART.length }} </span> </span>
+        </v-btn>
+      </div>
 
       <select-block
         :options="options"
         :selected="selected"
         @selectOption="sortCategory"
       />
-    
+
     <div class="CatalogPage-List">
        <catalog-item
         v-for="product in filteredProducts"
@@ -36,7 +42,7 @@ export default {
     return {
       // Категории для селекта
       options: [
-        {name: 'Все товары', value: ''},
+        {name: 'Все товары',},
         {name: 'Мужские',},
         {name: 'Женские',},
         {name: 'Aviator',},
@@ -45,7 +51,7 @@ export default {
         {name: 'Квадратные',},
         {name: 'Спортивные',},
       ],
-      selected: 'категория',
+      selected: 'Все товары',
       sortedProducts: []
     }
   },
@@ -96,7 +102,7 @@ export default {
 @import "../../assets/styles/styles.scss";
 
 .CatalogPage {
-  margin-top: 50px;
+  margin-top: 80px;
 
   &-List {
     width: 100%;
@@ -107,11 +113,21 @@ export default {
 
   &-LinkToCart {
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: $padding;
-    border: 1px solid #000;
-    cursor: pointer;
+    top: 16px;
+    right: 20px;
+    &_text {
+      color: #fff;
+      margin-right: 10px;
+      position: relative;  
+      font-weight: 500;
+    }
+    
+    &_num {
+      position: absolute;
+      top: -6px;
+      left: -17px;
+      font-size: 12px;
+    }
   }
 
 }

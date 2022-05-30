@@ -75,22 +75,33 @@ export default {
 
   .SelectBlock {
     position: absolute;
+    top: 22px;
     left: 20px;
-    top: 0;
     cursor: pointer;
-    width: 100px;
+    width: 200px;
+    background-color: #3fb884;
     text-align: center;
-    // margin: 0 auto;
+    color: #fff;
+    font-weight: 500;
+    padding: 7.5px;
+    border-radius: 2px;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+
     &-Selected { 
-      border: solid 1px #000;
       margin-bottom: 2px;
     }
+
     &-Options {
-      border: solid 1px #000;
+      border-top: 1px solid #31475e;
+      margin-top: 10px;
+      padding-top: 7px;
+      color: #31475e;
       &_item {
         display: block;
+        border-radius: 2px;
+        margin-bottom: 5px;
         &:hover {
-          background-color: gray;
+          background-color: #f9fbfd;
         }
       }
     }

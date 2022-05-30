@@ -20,7 +20,8 @@ export default {
 <style lang="scss">
   .MainWrapper {
     max-width: 1200px;
-    padding: 0 20px;
+    padding: 0 20px 45px 20px;
     margin: 0 auto;
   }
+ 
 </style>

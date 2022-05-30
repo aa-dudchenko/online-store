@@ -1,4 +1,5 @@
 # online-store
+***<https://vue-online-store-proj.netlify.app/#/>***
 ***(Проект в разработке)***
 
 ### **Проект на VueJS - "интернет магазин"** 
